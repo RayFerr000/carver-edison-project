@@ -26,7 +26,6 @@ function App() {
                   setUser(response.profileObj);
                 }
               }}
-              onFailure={(response) => console.log('FAILURE')}
               cookiePolicy={'single_host_origin'}
             />
         }
