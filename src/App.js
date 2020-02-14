@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Alert } from 'react-bootstrap';
 import { GoogleLogin } from 'react-google-login';
 import ExpenseReport from './components/ExpenseReport';
 
@@ -8,6 +8,7 @@ import './App.css';
 function App() {
   const [user, setUser] = useState({});
   const [oauthSuccess, setOauthSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   return(
     <div className="App">
@@ -23,12 +24,19 @@ function App() {
               onSuccess={(response) => {
                 if (response.profileObj) {
                   setOauthSuccess(true);
+                  setShowError(false);
                   setUser(response.profileObj);
                 }
               }}
-              onFailure={(response) => console.log('FAILURE')}
+              onFailure={(response) => {
+                console.log(response);
+                setShowError(true);
+              })}
               cookiePolicy={'single_host_origin'}
             />
+            <Alert variant='danger'>
+              Opps an error occured. Please try again.
+            </Alert>
         }
         </div>
       </Row>
