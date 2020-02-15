@@ -31,7 +31,7 @@ function App() {
               onFailure={(response) => {
                 console.log(response);
                 setShowError(true);
-              })}
+              }}
               cookiePolicy={'single_host_origin'}
             />
             {
