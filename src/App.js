@@ -34,9 +34,12 @@ function App() {
               })}
               cookiePolicy={'single_host_origin'}
             />
-            <Alert variant='danger'>
-              Opps an error occured. Please try again.
-            </Alert>
+            {
+              showError &&
+              <Alert variant='danger'>
+                Opps an error occured. Please try again.
+              </Alert>
+            }
         }
         </div>
       </Row>

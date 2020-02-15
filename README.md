@@ -7,7 +7,7 @@
 The first thing you need to do in order to get this project running locally is clone this repo. In your terminal, run this command
 
 ```sh
-https://github.com/RayFerr000/carver-edison-project.git
+git clone https://github.com/RayFerr000/carver-edison-project.git
 ```
 After this, I would suggest that you go through the procees of getting a google app client ID. You can do this here https://developers.google.com/identity/sign-in/web/sign-in
 
@@ -21,7 +21,7 @@ touch .env
 Now that the file .env is created, open it in your editor of choice and add the following line
 
 ```sh
-REACT_APP_GOOGLE_CLIENT_ID="PAST YOUR CLIENT ID HERE"
+REACT_APP_GOOGLE_CLIENT_ID="PASTE YOUR CLIENT ID HERE"
 ```
 
 After this, you cant start the application with 
